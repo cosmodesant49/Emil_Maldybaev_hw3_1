@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         mEditTextTo = findViewById(R.id.email);
         mEditTextSubject = findViewById(R.id.theme);
         mEditTextMessage = findViewById(R.id.mesage);
-
         Button buttonSend = findViewById(R.id.btnSend);
         buttonSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +44,6 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_TEXT, message);
 
         intent.setType("message/rfc822");
-        startActivity(Intent.createChooser(intent, "Choose an email client"));
+        startActivity(Intent.createChooser(intent, "Message"));
     }
 }
